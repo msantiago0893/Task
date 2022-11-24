@@ -20,17 +20,24 @@ export const taskSlice = createSlice({
   initialState: initialState,
   reducers: {
     addTask: (state, action) => {
-      console.log("action: ", action);
-      console.log('State -> ', state);
+      console.log('action: ', action);
+      console.log('state: ', state);
 
       // state.push(action.payload); // esto segun se puede hacer en redux tooltik
       return [
         ...state,
         action.payload
       ]
+    },
+    deleteTask: (state, action) => {
+      const taskFound = state.find(task => task.id === action.payload);
+
+      if (taskFound) {
+        state.splice(state.indexOf(taskFound), 1);
+      }
     }
   }
 });
 
-export const {addTask} = taskSlice.actions;
+export const { addTask, deleteTask } = taskSlice.actions;
 export default taskSlice.reducer;
