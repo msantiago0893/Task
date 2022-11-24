@@ -1,0 +1,43 @@
+### Git ###
+*.orig
+
+### Vue/NG CLI ###
+dist/
+dist-server/
+tmp/
+e2e/*.js
+e2e/*.map
+out-tsc/
+
+### Node ###
+node_modules/
+bower_components/
+package-lock.json
+
+### VSCode ###
+.vscode/
+
+### Eclipse ###
+.project
+.classpath
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.dbeaver
+
+### IntelliJ ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VIM ###
+*~
+*.swp
+*.swo
+
+### General ###
+*.log
+*.lock*
+*.DS_Store
