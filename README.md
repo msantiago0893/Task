@@ -8,7 +8,7 @@
 
   npm install @reduxjs/toolkit react-redux
   npm i uuid    // generate unique identifiers
-
+  npm install react-router-dom@6
 
 ### `npm start`
 
