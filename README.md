@@ -7,6 +7,7 @@
 ## Installed libraries
 
   npm install @reduxjs/toolkit react-redux
+  npm i uuid    // generate unique identifiers
 
 
 ### `npm start`
