@@ -1,3 +1,5 @@
+import ReactDOM from 'react-dom';
+
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -9,7 +11,8 @@ function TaskList() {
   const [isOpen, setIsOpen] = useState(false);
   const [itemDelete, setItemDelete] = useState(null);
 
-  const tasks = useSelector(state => state.task);
+  const tasks = useSelector((state) => state.task);
+
   const dispatch = useDispatch();
 
   const deleteItem = (id) => {
@@ -47,10 +50,19 @@ function TaskList() {
         }
       </div>
 
-      {isOpen &&
+      {isOpen && ReactDOM.createPortal(
+        <Modal setIsOpen={setIsOpen} handleDeleteTask={handleDeleteTask}>
+          <h1>¿Desea eliminar el elemento?</h1>
+        </Modal>,
+        document.getElementById('modal')
+      )}
+
+      {/* {
+      isOpen &&
         <Modal setIsOpen = {setIsOpen} handleDeleteTask = {handleDeleteTask}>
           <h1>¿Desea eliminar el elemento?</h1>
-        </Modal>}
+        </Modal>
+      } */}
 
     </div>
   )
