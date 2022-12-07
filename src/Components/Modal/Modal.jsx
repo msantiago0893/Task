@@ -10,7 +10,7 @@ const Modal = ({ children, setIsOpen, handleDeleteTask }) => {
   };
 
   return (
-    // * A React portal was integrated
+    // * A React portal was integratedn
     ReactDOM.createPortal(
       <>
         <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
