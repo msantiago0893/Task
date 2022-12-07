@@ -1,9 +1,9 @@
-import ReactDOM from 'react-dom';
-
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import { deleteTask } from '../slices/task/taskSlice';
+
 import Modal from './Modal/Modal';
 
 
@@ -50,12 +50,11 @@ function TaskList() {
         }
       </div>
 
-      {isOpen && ReactDOM.createPortal(
+      {isOpen &&
         <Modal setIsOpen={setIsOpen} handleDeleteTask={handleDeleteTask}>
           <h1>¿Desea eliminar el elemento?</h1>
-        </Modal>,
-        document.getElementById('modal')
-      )}
+        </Modal>
+      }
 
       {/* {
       isOpen &&
