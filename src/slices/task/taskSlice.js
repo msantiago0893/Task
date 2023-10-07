@@ -20,7 +20,6 @@ export const taskSlice = createSlice({
   initialState: initialState,
   reducers: {
     addTask: (state, action) => {
-      // state.push(action.payload); // esto segun se puede hacer en redux tooltik
       return [
         ...state,
         action.payload
@@ -42,7 +41,6 @@ export const taskSlice = createSlice({
         task.title = title;
         task.description = description;
       }
-
     }
   }
 });
