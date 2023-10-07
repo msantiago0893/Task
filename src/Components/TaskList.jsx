@@ -56,13 +56,6 @@ function TaskList() {
         </Modal>
       }
 
-      {/* {
-      isOpen &&
-        <Modal setIsOpen = {setIsOpen} handleDeleteTask = {handleDeleteTask}>
-          <h1>¿Desea eliminar el elemento?</h1>
-        </Modal>
-      } */}
-
     </div>
   )
 }
