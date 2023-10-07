@@ -25,7 +25,7 @@ function TaskForm() {
   }, [params, tasks]);
 
   const handleSubmit = e => {
-    e.preventDefault(); // se evita que se refresque la pagina
+    e.preventDefault();
 
     if (params.id) {
       dispatch(updateTask(task));
