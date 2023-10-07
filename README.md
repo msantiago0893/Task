@@ -1,4 +1,4 @@
-# Project Description
+# Example Task - React
 
 ## Project Details
 
